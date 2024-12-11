@@ -1,0 +1,296 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-title {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #e9ecef;
+}
+
+.disabled {
+    color: #aaa;
+    pointer-events: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+    width: 150px;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e9ecef;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.btn {
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.inmenu{
+    list-style: none;
+}
+.in-menu{
+    list-style: none;
+    display: none;
+}
+.information:hover .in-menu{
+    display: block;
+}
+.information{
+    content: " ▼";
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+.search{
+    border-radius: 5px;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    right: -270px; 
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; 
+    transform: translateX(0); !important
+
+}
+.menu:hover{
+    transform: translateX(-250px); !important
+}
+a{
+    color: black;
+}
+.search{
+    height: 30px;
+    color: green;
+    border-color: green;
+    background-color: white;
+}
+
+.share-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.media {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.media li {
+    margin: 10px 0;
+}
+
+.media a {
+    background-color: blue;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.media a:hover {
+    background-color: #333;
+}
+.social:hover .media {
+    display: block;
+}
+.share-container {
+    position: fixed;
+    bottom: 20px; 
+    right: 100px;
+    z-index: 1000;
+}
+.share-button {
+    width: 50px;
+    height: 50px;
+    background-image: url('icon.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; 
+    display: inline-block;
+}
+
+.progress-container {
+    width: 100%; 
+    max-width: 600px; 
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+
+.progress-bar {
+    height: 12px;
+    background-color: #000; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    animation: progress-animation 3s ease-in-out forwards; 
+}
+
+
+.progress-bar.blue {
+    background-color: #007bff;
+    animation-delay: 0.2s;
+}
+
+.progress-bar.green {
+    background-color: #28a745;
+    animation-delay: 0.4s;
+}
+
+.progress-bar.cyan {
+    background-color: #17a2b8;
+    animation-delay: 0.6s;
+}
+
+.progress-bar.yellow {
+    background-color: #ffc107;
+    animation-delay: 0.8s;
+}
+
+.progress-bar.red {
+    background-color: #dc3545;
+    animation-delay: 1s;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card img:hover{
+    opacity: 1;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.7);
+}
+.card{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    transition: opacity 0.3s ease-in-out;
+}
+.card-content {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px; 
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.city{
+    color: #dc3545;
+}
